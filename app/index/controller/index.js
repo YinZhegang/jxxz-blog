@@ -1,22 +1,19 @@
 let Sequelize = require('sequelize')
 let sequelize = require('../../db')
-// let User = sequelize.define('users',{
-//     username:{
-//         type:Sequelize.STRING,
-//         filed:'username'
-//     },
-//     email: {
-//         type: Sequelize.STRING,
-//         filed:'email'
-//     }
-// })
-sequelize.authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-    });
+let User = sequelize.define('users',{
+    nickname:{
+        type:Sequelize.STRING
+    },
+    avater:{
+        type:Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
+    }
+})
+User.findAll().then(user => {
+    console.log(user);
+})
 module.exports ={
     title:"000"
 }

@@ -1,13 +1,11 @@
 const router = require('koa-router')()
 const index  = require('../index/controller/index')
-const article  = require('../index/controller/article')
 
-router.get('/', async (ctx, next) => {
-  await ctx.render('index/view/lw-index', index)
-})
-router.get('/article', async (ctx, next) => {
-  await ctx.render('index/view/lw-article', article)
-})
+let Index = require('../index/controller/index')
+let Article  = require('../index/controller/article')
+router.get('/', Index)
+router.get('/index', Index)
+router.get('/article', Article)
 
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'

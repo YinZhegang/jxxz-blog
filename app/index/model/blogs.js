@@ -10,6 +10,6 @@ let Blogs = sequelize.define('users',{
     email: {
         type: Sequelize.STRING
     }
-})
+});
 
 module.exports = Blogs;

@@ -6,7 +6,7 @@ let Chart = require('../admin/controller/chart')
 let TableFontList = require('../admin/controller/table-font-list')
 let TableImagesList = require('../admin/controller/table-images-list')
 let FormNews = require('../admin/controller/form-news')
-let FormNewsList = require('../admin/controller/form-news-list')
+let FormNewsList = require('../admin/controller/form-news-list');
 let FormAmazeui = require('../admin/controller/form-amazeui')
 let FormLine = require('../admin/controller/form-line')
 
